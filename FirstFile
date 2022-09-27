@@ -1,0 +1,11 @@
+get_token() {
+    this.api.get_contact_token().subscribe(
+      (data) => {
+        this.rundom = data["code"];
+        this.token = data["token"];
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
